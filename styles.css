@@ -1,0 +1,52 @@
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+.wrapper{
+    height: max-content;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    text-align: center;
+    font-size: 70px;
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+.container{
+    background-color: aqua;
+    min-height: 550px;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.div{
+    margin: 5px;
+    height: 200px;
+    width: 200px;
+    background-color: black;
+}
+.addBook{
+    margin-top: 10px;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.form{
+    display: flex;
+    flex-direction:column;
+    font-size: 30px;
+}
+
+input{
+    height: 50px;
+    width: 100px;
+}
