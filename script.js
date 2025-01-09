@@ -7,8 +7,6 @@ function book(title, author, pages, read){
     this.read = read;
 }
 
-
-
 function getInputValue(){
     let inputVal = document.getElementsByTagName('input');
     let array = Array.from(inputVal);
@@ -22,16 +20,19 @@ function getInputValue(){
     for (let input of inputVal) {
         input.value = ''; // Clear the text in each input field
     }
+    const container = document.querySelector('.container');
+    container.style.visibility = "visible";
+
     addToLibrary();
 }
 let index = 0;
 function addToLibrary(){
     let parentDiv = document.querySelector('.container');
     let childDiv = document.createElement('div');
-    childDiv.textContent =  `Title: ${myLibrary[index].title} | ` + 
-                            `Author: ${myLibrary[index].author} | ` + 
-                            `Pages: ${myLibrary[index].pages} | ` + 
-                            `Have Read?: ${myLibrary[index].read}`;
+    childDiv.innerHTML = `Title: ${myLibrary[index].title} <br>` +
+                     `Author: ${myLibrary[index].author} <br>` +
+                     `Pages: ${myLibrary[index].pages} <br>` +
+                     `Notes: ${myLibrary[index].read}` ;
     childDiv.classList.add('childClass');
     parentDiv.appendChild(childDiv);
     index++;
@@ -40,4 +41,6 @@ function addToLibrary(){
 function addBook(){
     const form = document.querySelector('.form');
     form.style.display = "block";
+    const container = document.querySelector('.container');
+    container.style.visibility = "hidden";
 }
