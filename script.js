@@ -7,14 +7,19 @@ function book(title, author, pages, read){
     this.read = read;
 }
 
-function addBookLibrary(){
-    const newBook = new book(title, author, pages, read);
-    myLibrary.push(newBook);
+function getInputValue(){
+    let inputVal = document.getElementsByTagName('input');
+    let array = Array.from(inputVal);
+    let obj = new book(array[0].value, array[1].value, array[2].value, array[3].value);
+    myLibrary.push(obj);
+    for (let index = 0; index < myLibrary.length; index++) {
+        console.log(myLibrary[index]);
+    }
+    const form = document.querySelector('.form');
+    form.style.display = "none";
 }
 
-function getInputValue(){
-    let inputVal = document.getElementsByTagName('input')
-    Array.from(inputVal).forEach(element => {
-        console.log(element.value);
-    });
+function addBook(){
+    const form = document.querySelector('.form');
+    form.style.display = "block";
 }

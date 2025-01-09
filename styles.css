@@ -41,12 +41,21 @@
 }
 
 .form{
-    display: flex;
-    flex-direction:column;
+    position: absolute;
     font-size: 30px;
+    display: none;
+    margin-top: 200px;
 }
 
 input{
     height: 50px;
     width: 100px;
+    border: none;
+    border-radius: 10px;
+}
+
+#submit{
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
 }
