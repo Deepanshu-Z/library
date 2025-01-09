@@ -59,3 +59,11 @@ input{
     padding: 20px;
     border-radius: 10px;
 }
+
+.childClass{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: white;
+    font-size: larger;
+}
